@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Norte Digital — Sites, sistemas e automação sob medida</title>
+<meta name="description" content="A Norte Digital desenvolve sites, landing pages, sistemas digitais, catálogos, automação de atendimento e CRM sob medida para empresas.">
+<meta property="og:title" content="Norte Digital — Ideias digitais. Soluções que funcionam.">
+<meta property="og:description" content="Sites, sistemas e experiências digitais pensados para transformar como empresas se apresentam, atendem e operam.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🧭%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#000;--s1:#0d0d0f;--s2:#17171a;--s3:#26262b;--ln:#2a2a30;--mut:#9a9aa5;--tx:#f4f4f6;--blue:#4d7cff;--vio:#8b6cf6;--r:14px;
+--d:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;--b:'Instrument Sans','Segoe UI',system-ui,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(80px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 1.0625rem/1.6 var(--b);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--d);line-height:1.05;margin:0;letter-spacing:-.02em}
+h1{font-size:clamp(2.6rem,7vw,5.6rem);font-weight:700}
+h2{font-size:clamp(2rem,4.4vw,3.4rem);font-weight:700}
+h3{font-size:1.3rem;font-weight:500}
+p{margin:0}a{color:inherit}
+.wrap{width:min(1180px,100% - 2.5rem);margin-inline:auto}
+section{padding:clamp(4.5rem,9vw,8rem) 0}
+.lead{color:var(--mut);max-width:56ch}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:6px}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.4rem;border-radius:999px;border:1px solid var(--ln);background:transparent;color:var(--tx);font:600 .95rem var(--b);text-decoration:none;cursor:pointer;transition:transform .2s,background .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px);border-color:var(--mut)}
+.btn.pri{background:var(--tx);color:#000;border-color:var(--tx)}
+.btn.pri:hover{background:#fff;box-shadow:0 0 0 4px rgba(77,124,255,.28)}
+.btn.sm{padding:.55rem 1.05rem;font-size:.88rem}
+/* header */
+header{position:fixed;inset:0 0 auto;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+header.sc{background:rgba(0,0,0,.82);backdrop-filter:blur(14px);border-color:var(--ln)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:68px;gap:1rem}
+.logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;font:700 1.15rem var(--d)}
+.logo img{width:38px;height:38px;border-radius:8px}
+nav.main{display:flex;gap:.3rem;align-items:center}
+nav.main>a,nav.main>.dd>button{background:none;border:0;color:var(--mut);font:500 .95rem var(--b);padding:.5rem .85rem;border-radius:8px;cursor:pointer;text-decoration:none}
+nav.main>a:hover,nav.main>.dd>button:hover,nav.main a.on{color:var(--tx)}
+.dd{position:relative}
+.panel{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(6px);width:min(640px,90vw);background:var(--s1);border:1px solid var(--ln);border-radius:var(--r);padding:.75rem;display:grid;grid-template-columns:1fr 1fr;gap:.25rem;opacity:0;visibility:hidden;transition:.2s}
+.dd.open .panel{opacity:1;visibility:visible;transform:translateX(-50%)}
+.panel a{display:block;padding:.75rem .85rem;border-radius:10px;text-decoration:none}
+.panel a:hover{background:var(--s2)}
+.panel b{display:block;font:500 1rem var(--d)}.panel span{font-size:.85rem;color:var(--mut);line-height:1.35;display:block}
+.burger{display:none;background:none;border:1px solid var(--ln);border-radius:10px;width:44px;height:44px;color:var(--tx);cursor:pointer}
+.mnav{display:none}
+@media(max-width:900px){nav.main,.bar>.btn{display:none}.burger{display:block}
+.mnav{position:fixed;inset:68px 0 0;background:#000;padding:1.5rem 1.25rem;flex-direction:column;gap:.25rem;overflow:auto;z-index:49}
+.mnav.open{display:flex}.mnav a{font:500 1.6rem var(--d);padding:.7rem 0;border-bottom:1px solid var(--ln);text-decoration:none}.mnav .btn{margin-top:1.2rem;justify-content:center;font:600 1rem var(--b);border:1px solid var(--tx)}
+.panel{grid-template-columns:1fr}}
+/* hero */
+#inicio{padding-top:calc(130px + env(safe-area-inset-top,0px));overflow:hidden;position:relative}
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:3rem;align-items:center}
+.hero .lead{margin:1.6rem 0 2rem;font-size:1.15rem}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem}
+.stage{position:relative;height:520px}
+.win{position:absolute;background:var(--s1);border:1px solid var(--ln);border-radius:var(--r);overflow:hidden;box-shadow:0 30px 60px -30px rgba(77,124,255,.35)}
+.win .tb{display:flex;gap:5px;padding:.6rem .8rem;border-bottom:1px solid var(--ln);align-items:center;font-size:.72rem;color:var(--mut)}
+.win .tb i{width:8px;height:8px;border-radius:50%;background:var(--s3)}
+.w1{inset:0 12% 28% 0;animation:fl 9s ease-in-out infinite}
+.w2{right:0;top:34%;width:52%;bottom:2%;animation:fl 11s ease-in-out -3s infinite}
+.w3{left:4%;bottom:0;width:44%;animation:fl 10s ease-in-out -6s infinite}
+@keyframes fl{50%{transform:translateY(-10px)}}
+.ph{padding:1rem}.ph h4{margin:0 0 .4rem;font:700 1.35rem/1.1 var(--d)}.ph p{font-size:.78rem;color:var(--mut)}
+.bl{height:7px;border-radius:4px;background:var(--s3);margin:.45rem 0}.bl.a{background:linear-gradient(90deg,var(--blue),var(--vio));width:40%}
+.mini-btn{display:inline-block;margin-top:.6rem;padding:.35rem .8rem;background:var(--tx);color:#000;border-radius:99px;font-size:.72rem;font-weight:600}
+.bars{display:flex;align-items:flex-end;gap:6px;height:90px;padding:.8rem}.bars i{flex:1;background:var(--s3);border-radius:4px 4px 0 0;transform-origin:bottom;animation:gr 1.2s cubic-bezier(.2,.8,.2,1) both}
+.bars i.h{background:var(--blue)}@keyframes gr{from{transform:scaleY(.05)}}
+.kp{display:flex;gap:.5rem;padding:0 .8rem .8rem}.kp div{flex:1;background:var(--s2);border-radius:8px;padding:.5rem;font-size:.68rem;color:var(--mut)}.kp b{display:block;color:var(--tx);font:700 1rem var(--d)}
+.msg{margin:.5rem .8rem;padding:.5rem .7rem;border-radius:12px;font-size:.75rem;max-width:85%;background:var(--s2)}.msg.me{margin-left:auto;background:var(--vio);color:#fff}
+.tag{font-size:.72rem;color:var(--mut);border:1px solid var(--ln);padding:.2rem .6rem;border-radius:99px;display:inline-block}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.stage{height:440px}}
+/* solutions */
+.shead{display:flex;justify-content:space-between;align-items:end;gap:2rem;flex-wrap:wrap;margin-bottom:3rem}
+.sgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem}
+.sc1{grid-column:span 3}.sc2{grid-column:span 3}.sc3{grid-column:span 2}
+.card{background:var(--s1);border:1px solid var(--ln);border-radius:var(--r);padding:1.6rem;display:flex;flex-direction:column;gap:.9rem;min-height:290px;transition:border-color .25s}
+.card:hover{border-color:var(--blue)}
+.card p{color:var(--mut);font-size:.97rem}.card .btn{margin-top:auto;align-self:flex-start}
+.viz{height:84px;border-bottom:1px dashed var(--ln);display:flex;align-items:center;gap:.5rem;padding-bottom:.9rem}
+.viz span{display:block;border:1px solid var(--s3);border-radius:6px;height:100%;flex:1;background:var(--s2)}
+.viz span.b{background:linear-gradient(135deg,var(--blue),var(--vio));border:0}
+.viz .nav{flex:none;width:36px;display:flex;flex-direction:column;gap:6px;border:0;background:none}.viz .nav i{height:8px;background:var(--s3);border-radius:4px}
+.viz .node{flex:none;width:34px;height:34px;border-radius:50%;border:2px solid var(--blue);background:var(--s1)}.viz .ln{flex:1;height:2px;background:var(--s3);border:0;border-radius:0}
+.viz .lg{flex:none;font:700 2.2rem var(--d);width:auto;border:0;background:none;color:var(--tx)}
+@media(max-width:900px){.sc1,.sc2,.sc3{grid-column:span 6}.card{min-height:0}}
+/* demos */
+#projetos{background:var(--s1);border-block:1px solid var(--ln)}
+.tabs{display:flex;gap:.5rem;overflow-x:auto;padding-bottom:.5rem;margin-bottom:1.5rem}
+.tabs button{flex:none;background:none;border:1px solid var(--ln);color:var(--mut);padding:.6rem 1.1rem;border-radius:99px;font:500 .93rem var(--b);cursor:pointer;transition:.2s}
+.tabs button[aria-selected=true]{background:var(--tx);color:#000;border-color:var(--tx)}
+.demo{display:grid;grid-template-columns:260px 1fr;gap:2rem;align-items:start}
+.demo aside p{color:var(--mut);font-size:.95rem;margin-top:.9rem}
+.frame{background:var(--bg);border:1px solid var(--ln);border-radius:var(--r);overflow:hidden;min-height:420px}
+.frame .tb{display:flex;gap:6px;padding:.7rem 1rem;border-bottom:1px solid var(--ln);font-size:.78rem;color:var(--mut);align-items:center}
+.frame .tb i{width:9px;height:9px;border-radius:50%;background:var(--s3)}
+.in{padding:1.6rem;animation:fi .4s ease}@keyframes fi{from{opacity:0;transform:translateY(8px)}}
+.in h4{font:700 1.8rem/1.1 var(--d);margin:0 0 .6rem}.in p.m{color:var(--mut)}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.chip{background:var(--s2);border:1px solid var(--ln);color:var(--tx);padding:.45rem .9rem;border-radius:99px;font:500 .88rem var(--b);cursor:pointer}
+.chip[aria-pressed=true]{background:var(--blue);border-color:var(--blue)}
+.row{display:flex;justify-content:space-between;align-items:center;padding:.8rem 0;border-bottom:1px solid var(--ln);gap:1rem}
+.row small{color:var(--mut);display:block}
+.in input,.in select,.in textarea,.cf input,.cf select,.cf textarea{width:100%;background:var(--s2);border:1px solid var(--ln);border-radius:10px;padding:.8rem 1rem;color:var(--tx);font:inherit}
+.big{display:flex;align-items:flex-end;gap:10px;height:170px;margin:1.2rem 0}.big div{flex:1;background:var(--s3);border-radius:6px 6px 0 0;position:relative;transition:height .5s cubic-bezier(.2,.8,.2,1);min-height:4px}
+.big div:last-child{background:linear-gradient(var(--blue),var(--vio))}
+.big em{position:absolute;bottom:-1.5rem;left:0;right:0;text-align:center;font:normal .72rem var(--b);color:var(--mut)}
+.chat{display:flex;flex-direction:column;gap:.5rem;max-height:260px;overflow:auto}
+.chat .msg{margin:0;font-size:.92rem}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem}.kpis div{background:var(--s2);padding:.9rem;border-radius:10px;color:var(--mut);font-size:.82rem}.kpis b{display:block;color:var(--tx);font:700 1.5rem var(--d)}
+@media(max-width:900px){.demo{grid-template-columns:1fr}}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;position:relative;margin-top:3.5rem}
+.steps::before{content:"";position:absolute;top:21px;left:0;height:2px;width:100%;background:var(--s3)}
+.steps::after{content:"";position:absolute;top:21px;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--blue),var(--vio));transition:width 1.8s ease}
+.steps.go::after{width:100%}
+.st{position:relative;padding-top:3.4rem}.st b{position:absolute;top:0;left:0;width:44px;height:44px;border-radius:50%;background:var(--bg);border:2px solid var(--s3);display:grid;place-items:center;font:700 1rem var(--d);z-index:1;transition:border-color .5s}
+.go .st b{border-color:var(--blue)}.st p{color:var(--mut);margin-top:.5rem;font-size:.97rem}
+@media(max-width:900px){.steps{grid-template-columns:1fr;gap:2rem;padding-left:0}.steps::before,.steps::after{top:0;left:21px;width:2px;height:100%}.steps.go::after{width:2px}.st{padding:0 0 0 4rem}}
+/* commercial */
+.com{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.pts{list-style:none;margin:0;padding:0}.pts li{padding:1.2rem 0;border-top:1px solid var(--ln);display:flex;gap:1rem}
+.pts li::before{content:"";flex:none;width:10px;height:10px;margin-top:.5rem;border-radius:50%;background:var(--blue)}
+.pts li:nth-child(even)::before{background:var(--vio)}.pts b{font-weight:600}.pts span{color:var(--mut);display:block;font-size:.95rem}
+@media(max-width:900px){.com{grid-template-columns:1fr}}
+/* contact */
+#contato{background:linear-gradient(180deg,var(--bg),#0b0b14);border-top:1px solid var(--ln)}
+.ct{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.cf{display:grid;gap:.9rem;background:var(--s1);border:1px solid var(--ln);border-radius:var(--r);padding:1.6rem}
+.cf label{font-size:.88rem;color:var(--mut);display:grid;gap:.4rem}
+.note{font-size:.85rem;color:var(--mut);min-height:1.3em}
+@media(max-width:900px){.ct{grid-template-columns:1fr}}
+footer{border-top:1px solid var(--ln);padding:2rem 0;color:var(--mut);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.rv{opacity:1}
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}.js .rv.in2{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<a href="#conteudo" class="btn pri sm" style="position:absolute;left:-999px" onfocus="this.style.left='1rem';this.style.top='1rem';this.style.zIndex=99" onblur="this.style.left='-999px'">Ir para o conteúdo</a>
+<header id="hd"><div class="wrap bar">
+ <a href="#inicio" class="logo" aria-label="Norte Digital, início"><img src="data:image/png;base64,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" alt="" width="38" height="38">Norte Digital</a>
+ <nav class="main" aria-label="Principal">
+  <a href="#inicio">Início</a>
+  <div class="dd" id="dd"><button aria-expanded="false" aria-controls="pn">Soluções ▾</button>
+   <div class="panel" id="pn">
+    <a href="#web"><b>Desenvolvimento web</b><span>Sites, landing pages e páginas de conversão.</span></a>
+    <a href="#sistemas"><b>Sistemas digitais</b><span>Painéis, catálogos e cardápios sob medida.</span></a>
+    <a href="#automacao"><b>Automação e CRM</b><span>Contatos, fluxos de atendimento e integrações.</span></a>
+    <a href="#identidade"><b>Identidade visual digital</b><span>Logotipos e sistemas visuais para marcas.</span></a>
+    <a href="#seo"><b>SEO e otimização</b><span>Estrutura, desempenho e experiência mobile.</span></a>
+    <a href="#suporte"><b>Manutenção e suporte</b><span>Atualizações e ajustes conforme o escopo.</span></a>
+   </div></div>
+  <a href="#projetos">Projetos</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a>
+ </nav>
+ <a class="btn pri sm" href="#contato">Solicitar proposta</a>
+ <button class="burger" id="bg" aria-label="Abrir menu" aria-expanded="false" aria-controls="mn">☰</button>
+</div>
+<nav class="mnav" id="mn" aria-label="Menu móvel">
+ <a href="#inicio">Início</a><a href="#solucoes">Soluções</a><a href="#projetos">Projetos</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a>
+ <a class="btn pri" href="#contato">Solicitar proposta</a>
+</nav></header>
+
+<main id="conteudo">
+<section id="inicio"><div class="wrap hero">
+ <div>
+  <h1>Ideias digitais. Soluções que funcionam.</h1>
+  <p class="lead">Desenvolvemos sites, sistemas e experiências digitais pensados para transformar a maneira como empresas se apresentam, atendem e operam.</p>
+  <div class="cta"><a class="btn pri" href="#contato">Vamos conversar sobre seu projeto</a><a class="btn" href="#solucoes">Explorar soluções</a></div>
+ </div>
+ <div class="stage" aria-hidden="true">
+  <div class="win w1"><div class="tb"><i></i><i></i><i></i>&nbsp;padariaesquina.exemplo</div><div class="ph"><h4>Pão quente toda manhã.</h4><p>Encomendas para festas e cafés da tarde.</p><span class="mini-btn">Ver cardápio</span><div class="bl" style="margin-top:1rem"></div><div class="bl a"></div><div class="bl" style="width:70%"></div></div></div>
+  <div class="win w2"><div class="tb"><i></i><i></i><i></i>&nbsp;Painel</div><div class="kp"><div>Pedidos<b>128</b></div><div>Abertos<b>14</b></div></div><div class="bars"><i style="height:35%"></i><i style="height:55%"></i><i style="height:42%"></i><i class="h" style="height:80%"></i><i style="height:60%"></i><i style="height:48%"></i><i class="h" style="height:92%"></i></div></div>
+  <div class="win w3"><div class="tb"><i></i><i></i><i></i>&nbsp;Atendimento</div><div class="msg">Olá! Como podemos ajudar?</div><div class="msg me">Quero um orçamento</div><div style="height:.5rem"></div></div>
+ </div>
+</div></section>
+
+<section id="solucoes"><div class="wrap">
+ <div class="shead rv"><h2>Do site ao sistema,<br>o que sua operação precisa.</h2><p class="lead">Seis frentes que se combinam conforme a necessidade do seu negócio.</p></div>
+ <div class="sgrid rv">
+  <article class="card sc1" id="web"><div class="viz"><span class="b"></span><span></span><span></span></div><h3>Desenvolvimento web</h3><p>Sites institucionais, landing pages, sites comerciais e páginas de conversão.</p><a class="btn sm" href="#contato" data-tipo="Desenvolvimento web">Pedir orçamento</a></article>
+  <article class="card sc2" id="sistemas"><div class="viz"><div class="nav"><i></i><i></i><i></i></div><span></span><span class="b"></span></div><h3>Sistemas digitais</h3><p>Painéis administrativos, catálogos digitais, cardápios e soluções personalizadas.</p><a class="btn sm" href="#contato" data-tipo="Sistema digital">Pedir orçamento</a></article>
+  <article class="card sc3" id="automacao"><div class="viz"><div class="node"></div><div class="ln"></div><div class="node" style="border-color:var(--vio)"></div><div class="ln"></div><div class="node"></div></div><h3>Automação e CRM</h3><p>Organização de contatos, fluxos de atendimento e integração de ferramentas, conforme a viabilidade técnica.</p><a class="btn sm" href="#contato" data-tipo="Automação e CRM">Pedir orçamento</a></article>
+  <article class="card sc3" id="identidade"><div class="viz"><div class="lg">N</div><span class="b" style="flex:none;width:44px"></span><span style="flex:none;width:44px"></span></div><h3>Identidade visual digital</h3><p>Logotipos, sistemas visuais e aplicações para a presença digital de marcas.</p><a class="btn sm" href="#contato" data-tipo="Identidade visual digital">Pedir orçamento</a></article>
+  <article class="card sc3" id="seo"><div class="viz"><div class="bars" style="flex:1;height:100%;padding:0"><i style="height:30%"></i><i style="height:50%"></i><i class="h" style="height:70%"></i><i class="h" style="height:100%"></i></div></div><h3>SEO e otimização</h3><p>Melhorias de estrutura, desempenho, experiência mobile e fundamentos técnicos de SEO.</p><a class="btn sm" href="#contato" data-tipo="SEO e otimização">Pedir orçamento</a></article>
+  <article class="card sc3" id="suporte"><div class="viz"><span style="flex:none;width:60px"></span><span class="b" style="flex:none;width:30px"></span><span></span></div><h3>Manutenção e suporte</h3><p>Atualizações, ajustes e suporte conforme o escopo contratado.</p><a class="btn sm" href="#contato" data-tipo="Manutenção e suporte">Pedir orçamento</a></article>
+ </div>
+</div></section>
+
+<section id="projetos"><div class="wrap">
+ <div class="shead rv"><h2>Explore as interfaces.</h2><p class="lead">Estudos de interface criados pela Norte. Todos os exemplos são conceituais e funcionam direto aqui na página.</p></div>
+ <div role="tablist" class="tabs" id="tabs" aria-label="Demonstrações"></div>
+ <div class="demo"><aside><span class="tag">Projeto conceitual</span><h3 id="dt" style="margin-top:1rem"></h3><p id="dd2"></p></aside>
+ <div class="frame"><div class="tb"><i></i><i></i><i></i>&nbsp;<span id="url"></span></div><div id="dm" role="tabpanel" aria-live="polite"></div></div></div>
+</div></section>
+
+<section id="sobre"><div class="wrap">
+ <div class="rv"><h2>Como trabalhamos.</h2><p class="lead" style="margin-top:1rem">Um caminho claro, do primeiro contato à publicação.</p></div>
+ <div class="steps rv" id="steps">
+  <div class="st"><b>1</b><h3>Entendimento</h3><p>Ouvimos sua necessidade, seu público e como o negócio funciona hoje.</p></div>
+  <div class="st"><b>2</b><h3>Solução e escopo</h3><p>Definimos o que será feito, o que fica de fora e como será entregue.</p></div>
+  <div class="st"><b>3</b><h3>Desenvolvimento e validação</h3><p>Construímos e mostramos o andamento para você validar e ajustar.</p></div>
+  <div class="st"><b>4</b><h3>Publicação e entrega</h3><p>Colocamos no ar, conferimos tudo e entregamos o projeto finalizado.</p></div>
+ </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap com">
+ <div class="rv"><h2>Cada projeto recebe uma proposta própria.</h2><p class="lead" style="margin:1rem 0 2rem">Sem pacotes prontos: o valor nasce do escopo combinado com você.</p><a class="btn pri" href="#contato">Solicitar uma proposta</a></div>
+ <ul class="pts rv">
+  <li><div><b>Valor definido para o escopo</b><span>O desenvolvimento é contratado por um valor fechado para o que foi acordado.</span></div></li>
+  <li><div><b>Sem mensalidade obrigatória</b><span>Não existe mensalidade de desenvolvimento.</span></div></li>
+  <li><div><b>Suporte à parte</b><span>Manutenção e suporte podem ser contratados separadamente.</span></div></li>
+  <li><div><b>Custos de terceiros</b><span>Hospedagem, domínio, APIs e outros serviços externos podem ter custos próprios.</span></div></li>
+ </ul>
+</div></section>
+
+<section id="contato"><div class="wrap ct">
+ <div class="rv"><h2>Qual solução sua empresa precisa tirar do papel?</h2><p class="lead" style="margin:1rem 0 2rem">Conte o que você tem em mente. Respondemos pelo WhatsApp com os próximos passos.</p><button class="btn pri" id="wa">Iniciar conversa no WhatsApp</button><p class="note" id="wn" role="status"></p></div>
+ <form class="cf rv" id="cf">
+  <label>Seu nome<input name="n" required autocomplete="name"></label>
+  <label>Tipo de projeto<select name="t" id="tipo"><option>Desenvolvimento web</option><option>Sistema digital</option><option>Automação e CRM</option><option>Identidade visual digital</option><option>SEO e otimização</option><option>Manutenção e suporte</option><option>Ainda não sei</option></select></label>
+  <label>Conte brevemente a necessidade<textarea name="m" rows="3"></textarea></label>
+  <button class="btn pri" type="submit">Enviar pelo WhatsApp</button>
+ </form>
+</div></section>
+</main>
+<footer><div class="wrap"><span>© 2026 Norte Digital</span><span>Os exemplos desta página são projetos conceituais.</span></div></footer>
+
+<script>
+document.documentElement.classList.add('js');
+// CONFIG: número oficial da Norte Digital, apenas dígitos com DDI (ex.: 5531999999999)
+const WHATSAPP = "";
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const hd=$('#hd');addEventListener('scroll',()=>hd.classList.toggle('sc',scrollY>20),{passive:true});
+// dropdown
+const dd=$('#dd'),db=$('button',dd);
+db.onclick=()=>{const o=dd.classList.toggle('open');db.setAttribute('aria-expanded',o)};
+document.addEventListener('click',e=>{if(!dd.contains(e.target)){dd.classList.remove('open');db.setAttribute('aria-expanded',false)}});
+addEventListener('keydown',e=>{if(e.key==='Escape'){dd.classList.remove('open');closeM();db.focus&&0}});
+$$('.panel a',dd).forEach(a=>a.onclick=()=>dd.classList.remove('open'));
+// mobile
+const mn=$('#mn'),bg=$('#bg');
+function closeM(){mn.classList.remove('open');bg.setAttribute('aria-expanded',false);bg.textContent='☰';document.body.style.overflow=''}
+bg.onclick=()=>{const o=mn.classList.toggle('open');bg.setAttribute('aria-expanded',o);bg.textContent=o?'✕':'☰';document.body.style.overflow=o?'hidden':''};
+$$('a',mn).forEach(a=>a.onclick=closeM);
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in2');if(e.target.id==='steps')e.target.classList.add('go');io.unobserve(e.target)}}),{threshold:.15});
+$$('.rv').forEach(el=>io.observe(el));
+// demos
+const money=v=>v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+const D=[
+{k:'Site local',t:'Site para negócio local',u:'cafedabarra.exemplo',d:'Apresentação clara, horários e contato direto. Teste o seletor de dia.',r(el){
+ const h={Seg:'7h às 18h',Ter:'7h às 18h',Qua:'7h às 18h',Qui:'7h às 18h',Sex:'7h às 20h',Sáb:'8h às 20h',Dom:'Fechado'};
+ el.innerHTML=`<div class="in"><h4>Café da Barra</h4><p class="m">Café coado na hora, pães artesanais e um balcão para chegar sem pressa.</p><p style="margin-top:1.4rem"><b>Horário de funcionamento</b></p><div class="chips" id="c">${Object.keys(h).map(x=>`<button class="chip" aria-pressed="false">${x}</button>`).join('')}</div><p id="o" class="m">Escolha um dia.</p></div>`;
+ $$('.chip',el).forEach(b=>b.onclick=()=>{$$('.chip',el).forEach(x=>x.setAttribute('aria-pressed',x===b));$('#o',el).textContent=`${b.textContent}: ${h[b.textContent]}`})}},
+{k:'Landing page',t:'Landing page comercial',u:'oficinadeideias.exemplo',d:'Uma oferta, uma ação. O formulário valida e confirma o envio.',r(el){
+ el.innerHTML=`<div class="in"><h4>Aula experimental de fotografia</h4><p class="m">Uma tarde prática para aprender luz, enquadramento e edição básica.</p><form id="f" style="display:grid;gap:.7rem;margin-top:1.4rem;max-width:380px"><input type="email" placeholder="Seu melhor e-mail" required aria-label="E-mail"><button class="btn pri" style="justify-content:center">Quero reservar minha vaga</button><p class="m" id="s" role="status"></p></form></div>`;
+ $('#f',el).onsubmit=e=>{e.preventDefault();$('#s',el).textContent='Pedido registrado nesta demonstração. Nenhum dado foi enviado.'}}},
+{k:'Cardápio',t:'Cardápio digital',u:'cardapio.exemplo',d:'Filtre por categoria e monte um pedido com total automático.',r(el){
+ const it=[['Lanches','X-Burger da Casa',32],['Lanches','Sanduíche vegetal',28],['Bebidas','Limonada suíça',14],['Bebidas','Café gelado',12],['Sobremesas','Pudim de leite',16]];let cat='Todos',cart={};
+ const draw=()=>{const n=Object.values(cart).reduce((a,b)=>a+b,0),tot=it.reduce((s,x,i)=>s+(cart[i]||0)*x[2],0);
+ el.innerHTML=`<div class="in"><div class="chips">${['Todos','Lanches','Bebidas','Sobremesas'].map(c=>`<button class="chip" data-c="${c}" aria-pressed="${c===cat}">${c}</button>`).join('')}</div>${it.map((x,i)=>cat==='Todos'||x[0]===cat?`<div class="row"><div>${x[1]}<small>${money(x[2])}</small></div><div>${cart[i]?`<button class="chip" data-m="${i}" aria-label="Remover ${x[1]}">−</button> ${cart[i]} `:''}<button class="chip" data-a="${i}" aria-label="Adicionar ${x[1]}">+</button></div></div>`:'').join('')}<p style="margin-top:1.2rem"><b>${n} ${n===1?'item':'itens'} · ${money(tot)}</b></p></div>`;
+ $$('[data-c]',el).forEach(b=>b.onclick=()=>{cat=b.dataset.c;draw()});$$('[data-a]',el).forEach(b=>b.onclick=()=>{cart[b.dataset.a]=(cart[b.dataset.a]||0)+1;draw()});$$('[data-m]',el).forEach(b=>b.onclick=()=>{cart[b.dataset.m]--;draw()})};draw()}},
+{k:'Painel',t:'Painel de gestão',u:'painel.exemplo',d:'Alterne o período e veja os indicadores mudarem. Dados ilustrativos.',r(el){
+ const P={Semana:{v:[40,65,50,80,70,90,60],l:['S','T','Q','Q','S','S','D'],a:'86',b:'12'},Mês:{v:[55,70,45,85,60,95,75],l:['1','5','10','15','20','25','30'],a:'342',b:'31'}};
+ const draw=p=>{const x=P[p];el.innerHTML=`<div class="in"><div class="chips">${Object.keys(P).map(k=>`<button class="chip" aria-pressed="${k===p}">${k}</button>`).join('')}</div><div class="kpis"><div>Solicitações<b>${x.a}</b></div><div>Em aberto<b>${x.b}</b></div><div>Concluídas<b>${x.a-x.b}</b></div></div><div class="big" style="margin-bottom:2.2rem">${x.v.map((h,i)=>`<div style="height:${h}%"><em>${x.l[i]}</em></div>`).join('')}</div></div>`;$$('.chip',el).forEach(b=>b.onclick=()=>draw(b.textContent))};draw('Semana')}},
+{k:'Automação',t:'Automação de atendimento',u:'atendimento.exemplo',d:'Um fluxo simples de respostas. Escolha uma opção para seguir a conversa.',r(el){
+ const F={start:['Olá! Sobre o que você quer falar?',['Horários','Orçamento','Falar com a equipe']],Horários:['Atendemos de segunda a sexta, em horário comercial.',['Voltar']],Orçamento:['Para um orçamento, preciso saber o tipo de serviço e o prazo desejado.',['Voltar']],'Falar com a equipe':['Certo. A conversa seria encaminhada para uma pessoa da equipe.',['Voltar']]};
+ let log=[];const go=k=>{const n=F[k==='Voltar'?'start':k];if(k!=='Voltar'&&k!=='start')log.push(['me',k]);log.push(['bot',n[0]]);draw(n[1])};
+ el.innerHTML=`<div class="in"><div class="chat" id="ch"></div><div class="chips" id="op"></div></div>`;
+ const draw=o=>{$('#ch',el).innerHTML=log.map(m=>`<div class="msg ${m[0]==='me'?'me':''}">${m[1]}</div>`).join('');$('#ch',el).scrollTop=1e5;$('#op',el).innerHTML=o.map(x=>`<button class="chip">${x}</button>`).join('');$$('#op .chip',el).forEach(b=>b.onclick=()=>go(b.textContent))};go('start')}}];
+const tabs=$('#tabs');let cur=0;
+function show(i){cur=i;$$('button',tabs).forEach((b,j)=>{b.setAttribute('aria-selected',j===i);b.tabIndex=j===i?0:-1});$('#dt').textContent=D[i].t;$('#dd2').textContent=D[i].d;$('#url').textContent=D[i].u;D[i].r($('#dm'))}
+D.forEach((d,i)=>{const b=document.createElement('button');b.role='tab';b.textContent=d.k;b.onclick=()=>show(i);b.onkeydown=e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){const n=(i+(e.key==='ArrowRight'?1:D.length-1))%D.length;show(n);$$('button',tabs)[n].focus()}};tabs.append(b)});show(0);
+// contato
+$$('[data-tipo]').forEach(a=>a.onclick=()=>{$('#tipo').value=a.dataset.tipo});
+function wa(txt){const n=$('#wn');if(!WHATSAPP){n.textContent='O número oficial de WhatsApp ainda precisa ser configurado no código (constante WHATSAPP).';return}
+ window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(txt)}`,'_blank','noopener')}
+$('#wa').onclick=()=>wa('Olá, Norte Digital! Quero conversar sobre um projeto.');
+$('#cf').onsubmit=e=>{e.preventDefault();const f=e.target;wa(`Olá, Norte Digital! Sou ${f.n.value}. Tenho interesse em: ${f.t.value}.${f.m.value?' '+f.m.value:''}`)};
+</script>
+</body></html>

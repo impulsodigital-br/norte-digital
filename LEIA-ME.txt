@@ -1,0 +1,8 @@
+Norte Digital - site estático (HTML único)
+
+Publicação: envie index.html e robots.txt para a raiz da hospedagem.
+
+ANTES DE PUBLICAR: abra index.html em um editor de texto, procure por
+const WHATSAPP = ""
+e preencha com o número oficial, só dígitos, com DDI e DDD (ex.: 5531999999999).
+Sem isso, os botões de WhatsApp mostram um aviso em vez de abrir a conversa.
